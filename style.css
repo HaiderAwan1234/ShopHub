@@ -1,0 +1,265 @@
+/* Navbar base styles */
+.navbar {
+  transition: all 0.3s ease;
+  position: relative; /* This is crucial for absolute positioning of children */
+}
+
+.navbar.scrolled {
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile Menu Styles - Fixed Version */
+.mobile-menu {
+  position: absolute;
+  top: 100%; /* Position directly below navbar */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #1e293b; /* slate-800 */
+  z-index: 1000; /* Ensure it appears above content */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.active {
+  max-height: 500px; /* Adjust based on your content height */
+  transition: max-height 0.5s ease-in;
+}
+
+/* Mobile menu links */
+.mobile-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  border-bottom: 1px solid #334155; /* slate-700 */
+}
+
+.mobile-menu a:hover {
+  background: #334155; /* slate-700 */
+}
+
+/* Search Bar Styles */
+.search-bar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #1e293b; /* slate-800 */
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.search-bar.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ................MAIN CONTENT>>>>>>>>>> */
+
+/* Hero Section Styles */
+.hero {
+  min-height: 100vh;
+  margin-top: 0; /* Remove any default margin */
+}
+
+.btn-primary {
+  background: #f59e0b; /* amber-400 */
+  color: #1e293b; /* slate-900 */
+}
+
+.btn-primary:hover {
+  background: #d97706; /* amber-500 */
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+}
+
+/* Animation for hero content */
+.hero h1 {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.hero .flex {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .........FEATURE SECTION......... */
+
+.product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.add-to-cart {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.product-card:hover .add-to-cart {
+  opacity: 1;
+}
+
+/* .........Category SECTION......... */
+
+.category-card {
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ..................  ABOUT SECTION >>>>>>>>>> */
+
+/* Animation Styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Section Animations */
+.about-section {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.values-section {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.cta-section {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* Element Animations */
+.team-image {
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.team-image:hover {
+  transform: perspective(1000px) rotateY(0deg);
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+}
+
+.value-card {
+  transform: translateY(0);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.stats-box {
+  transition: all 0.3s ease;
+}
+
+.stats-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+.highlight-text {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #f59e0b;
+  transition: width 0.3s ease;
+}
+
+.highlight-text:hover::after {
+  width: 100%;
+}

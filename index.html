@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/images/logo.webp" />
+  </head>
+  <body class="bg-slate-50">
+    <!-- Navigation Bar -->
+    <nav
+      class="navbar fixed top-0 left-0 right-0 z-50 bg-slate-900 text-white py-4 sm:py-3 px-2 lg:px-8"
+    >
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo and Mobile Menu Button -->
+        <div class="flex items-center">
+          <a href="#" class="text-[21px] sm:text-2xl font-bold">
+            <span class="text-amber-400">Shop</span>Hub
+          </a>
+
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden text-white focus:outline-none px-2 sm:px-0"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center ml-3">
+          <a href="#" class="px-4 py-2 rounded-lg hover:bg-slate-700 transition"
+            >Home</a
+          >
+          <a
+            href="#shop"
+            class="px-4 py-2 rounded-lg hover:bg-slate-700 transition"
+            >Shop</a
+          >
+          <a
+            href="#category"
+            class="px-4 py-2 rounded-lg hover:bg-slate-700 transition"
+            >Categories</a
+          >
+          <a
+            href="#about"
+            class="px-4 py-2 rounded-lg hover:bg-slate-700 transition"
+            >About Us</a
+          >
+          <a
+            href="#contact"
+            class="px-4 py-2 rounded-lg hover:bg-slate-700 transition"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Search Bar (Desktop) -->
+        <div class="hidden lg:block mx-4 flex-1 max-w-xl">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search products..."
+              class="w-full py-2 px-4 pr-10 rounded-full bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
+            <div
+              class="absolute right-3 top-2 text-slate-400 hover:text-white cursor-pointer"
+            >
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <!-- Search Button (Mobile) -->
+          <button
+            id="search-button"
+            class="lg:hidden text-white focus:outline-none"
+          >
+            <i class="fas fa-search text-xl"></i>
+          </button>
+
+          <!-- Wishlist -->
+          <a
+            href="#"
+            class="relative text-white hover:text-amber-400 transition"
+          >
+            <i class="far fa-heart text-xl"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-amber-400 text-slate-900 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
+              >3</span
+            >
+          </a>
+
+          <!-- Cart -->
+          <a
+            href="#"
+            class="relative text-white hover:text-amber-400 transition"
+          >
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-amber-400 text-slate-900 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
+              >5</span
+            >
+          </a>
+
+          <!-- User Profile -->
+          <a href="#" class="text-white hover:text-amber-400 transition">
+            <i class="far fa-user text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div
+        id="mobile-search"
+        class="search-bar lg:hidden bg-slate-800 px-4 py-3"
+      >
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search products..."
+            class="w-full py-2 px-4 pr-10 rounded-full bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-400"
+          />
+
+          <button
+            class="absolute right-3 top-2 text-slate-400 hover:text-white"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu lg:hidden bg-slate-800">
+        <div class="px-4 py-2 flex flex-col space-y-1">
+          <a href="#" class="px-4 py-3 rounded-lg hover:bg-slate-700 transition"
+            >Home</a
+          >
+          <a href="#" class="px-4 py-3 rounded-lg hover:bg-slate-700 transition"
+            >Shop</a
+          >
+          <a href="#" class="px-4 py-3 rounded-lg hover:bg-slate-700 transition"
+            >Categories</a
+          >
+          <a href="#" class="px-4 py-3 rounded-lg hover:bg-slate-700 transition"
+            >About Us</a
+          >
+          <a href="#" class="px-4 py-3 rounded-lg hover:bg-slate-700 transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- >...............MAIN CONTENT ........... -->
+    <!-- .
+     .
+     .
+     . -->
+
+    <!-- Placeholder Content to Enable Scrolling -->
+    <section
+      class="hero relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+      <div class="absolute inset-0">
+        <img
+          src="/images/best.jpg"
+          alt="Trending products"
+          class="w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Hero Content -->
+      <div class="container mx-auto px-6 relative z-20 text-center text-white">
+        <div class="max-w-3xl mx-auto">
+          <!-- Badge -->
+          <span
+            class="inline-block cursor-pointer bg-amber-400 text-slate-900 mb-1 sm:mb-4 px-3 sm:px-4 py-2 rounded-full text-sm font-bold sm:animate-bounce"
+          >
+            Summer Sale - Up to 50% Off
+          </span>
+
+          <!-- Headline -->
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-6 leading-tight pt-4 sm:pt-0"
+          >
+            Discover Your Perfect <span class="text-amber-400">Style</span>
+          </h1>
+
+          <!-- Tagline -->
+          <p class="text-md sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Explore our curated collection of premium products designed to
+            elevate your everyday life.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              class="bg-amber-400 hover:bg-amber-500 px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 hover:text-white"
+            >
+              Shop Now <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+            <button
+              class="btn-secondary px-8 py-3 rounded-full font-bold transition-all duration-200 transform hover:scale-105"
+            >
+              Explore Collections
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-2 sm:bottom-10 left-[43%] sm:left-1/2 transform -translate-x-1/2 z-20 animate-bounce"
+      >
+        <a href="#featured" class="text-white hover:text-amber-400">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 
+    < < < < < < > < < FEATURE SECTION.................
+    .
+    .
+    .
+    .
+    .
+    /
+    . -->
+    <!-- Featured Products Section (Placeholder) -->
+
+    <!-- Featured Products Section -->
+    <section id="shop" class="py-10 sm:py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+          >
+            Featured Products
+          </h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Discover our handpicked selection of premium products
+          </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Badge -->
+            <div
+              class="absolute top-4 left-4 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full z-10"
+            >
+              Trending
+            </div>
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/watch1.avif"
+                alt="Wireless Headphones"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Smart Watch Pro
+                </h3>
+                <span class="text-amber-400 text-lg font-bold">$199</span>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(142 reviews)</span>
+              </div>
+              <!-- Add to Cart Button (shown on hover) -->
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/watch2.avif"
+                alt="Smart Watch"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Premium Watch
+                </h3>
+                <span class="text-amber-400 text-lg font-bold">$249</span>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(89 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Badge -->
+            <div
+              class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10"
+            >
+              Sale
+            </div>
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/phone.avif"
+                alt="Wireless Speaker"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Iphone 16 pro
+                </h3>
+                <div>
+                  <span class="text-slate-400 text-sm line-through mr-2"
+                    >$129</span
+                  >
+                  <span class="text-amber-400 text-lg font-bold">$99</span>
+                </div>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(214 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/headphone.avif"
+                alt="Wireless Earbuds"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Wireless Headphone
+                </h3>
+                <span class="text-amber-400 text-lg font-bold">$159</span>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(176 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........SECOND  GRID >>>>>>>>>>>>>>>>>>>
+        ,
+        ,
+        ,
+        ,
+        ,
+        , -->
+
+        <div
+          class="2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-9 sm:pt-10"
+        >
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Badge -->
+            <div
+              class="absolute top-4 left-4 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full z-10"
+            >
+              Trending
+            </div>
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/cap.avif"
+                alt="Wireless Headphones"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">RVCA Hat</h3>
+                <span class="text-amber-400 text-lg font-bold">$199</span>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(142 reviews)</span>
+              </div>
+              <!-- Add to Cart Button (shown on hover) -->
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="/Section_images/camera.avif"
+                alt="Smart Watch"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Premium Camera
+                </h3>
+                <span class="text-amber-400 text-lg font-bold">$2,299</span>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(89 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Badge -->
+            <div
+              class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10"
+            >
+              Sale
+            </div>
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                alt="Wireless Speaker"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Elite Sound Pro
+                </h3>
+                <div>
+                  <span class="text-slate-400 text-sm line-through mr-2"
+                    >$599</span
+                  >
+                  <span class="text-amber-400 text-lg font-bold">$399</span>
+                </div>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(214 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100 relative"
+          >
+            <!-- Product Image -->
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80"
+                alt="Jacket"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <!-- Product Info -->
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-slate-900">
+                  Leather Jacket
+                </h3>
+                <div>
+                  <span class="text-slate-400 text-sm line-through mr-2"
+                    >$1,899</span
+                  >
+                  <span class="text-amber-400 text-lg font-bold">$1,499</span>
+                </div>
+              </div>
+              <div class="flex items-center mb-3">
+                <div class="flex text-amber-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-slate-500 text-sm ml-2">(176 reviews)</span>
+              </div>
+              <button
+                class="add-to-cart w-full bg-slate-900 text-white py-2 rounded-lg font-medium flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-8 sm:mt-12">
+          <button
+            class="px-8 py-3 rounded-full font-bold border-2 border-slate-900 text-slate-900 hover:bg-[#FBBF24] hover:border-[#FBBF24] hover:text-white transition-all duration-200"
+          >
+            View All Products <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- >...............CATEGORY  SECTION ........... -->
+    <!-- .
+     .
+     .
+     . -->
+    <!-- ........Boys Section........ -->
+
+    <!-- Men's Fashion Categories Section -->
+    <section id="category" class="pt-10 bg-slate-50 sm:-mt-6">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Men's Fashion
+          </h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Discover styles for every occasion
+          </p>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Category 1 - Formal Wear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Boys_section/formal.avif"
+                alt="Men's Formal Wear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Formal Wear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 2 - Casual Wear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Boys_section/casual.avif"
+                alt="Men's Casual Wear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Casual Wear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 3 - Sportswear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Boys_section/sports.avif"
+                alt="Men's Sportswear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Sportswear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 4 - Accessories -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Boys_section/accessories_2.avif"
+                alt="Men's Accessories"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Accessories
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-7 sm:mt-12 mb-4">
+          <button
+            class="px-6 sm:px-8 py-3 rounded-full font-bold border-2 border-slate-900 text-slate-900 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+          >
+            View All Categories <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ,...........GIRLS <SECTION class=""></SECTION>
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    , -->
+
+    <section class="pt-10 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Girl's Fashion
+          </h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            Discover styles for every occasion
+          </p>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Category 1 - Formal Wear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Girls_section/formal.avif"
+                alt="Men's Formal Wear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Formal Wear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 2 - Casual Wear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Girls_section/casual.avif"
+                alt="Men's Casual Wear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Casual Wear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 3 - Sportswear -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Girls_section/sports.avif"
+                alt="Men's Sportswear"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Sportswear
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 4 - Accessories -->
+          <div
+            class="category-card group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <div class="h-64 overflow-hidden cursor-pointer">
+              <img
+                src="/Girls_section/accessories.avif"
+                alt="Men's Accessories"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"
+              ></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 class="text-2xl font-bold text-white mb-2 cursor-pointer">
+                Accessories
+              </h3>
+              <button
+                class="text-amber-400 font-medium hover:text-white transition-colors"
+              >
+                Explore Collection <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-7 sm:mt-12 mb-4">
+          <button
+            class="px-6 sm:px-8 py-3 rounded-full font-bold border-2 border-slate-900 text-slate-900 hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+          >
+            View All Categories <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ,...........ABOUT SECTION 
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    , -->
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section py-10 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-9 sm:mb-12">
+          <span
+            class="text-md cursor-pointer font-semibold tracking-wider uppercase text-amber-400 highlight-text"
+            >Our Story</span
+          >
+          <h2
+            class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+          >
+            Welcome to
+            <span class="text-amber-400 highlight-text cursor-pointer"
+              >ShopHub</span
+            >
+          </h2>
+          <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Where quality meets style and customer satisfaction is our priority
+          </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Text Content -->
+          <div class="space-y-6">
+            <div class="prose prose-lg text-slate-700 max-w-none">
+              <h3
+                class="text-3xl pb-1 text-center w-[100%] sm:w-[25%] sm:text-start cursor-pointer sm:text-2xl font-bold text-slate-900 highlight-text"
+              >
+                Our Journey
+              </h3>
+              <p class="py-3 text-[14.4px] sm:text-[16px] text-center">
+                Founded in 2025, ShopHub began as a small passion project
+                between friends who shared a love for quality products and
+                exceptional customer service. Today, we've grown into one of the
+                most trusted e-commerce destinations, serving thousands of happy
+                customers worldwide.
+              </p>
+
+              <!-- Unique Selling Points -->
+              <div
+                class="mt-6 py-4 px-3 sm:px-5 cursor-pointer bg-amber-50 rounded-xl border border-amber-100 pulse-animation"
+              >
+                <h4
+                  class="text-[19px] w-[100%] sm:w-[40%] text-center sm:text-start font-semibold text-amber-800 mb-2 highlight-text"
+                >
+                  What Makes Us Different
+                </h4>
+                <p class="text-[14.4px] sm:text-[16px]">
+                  Unlike typical online stores, we personally curate and test
+                  every product in our collection. Our team of experts selects
+                  only items that meet our high standards for quality,
+                  sustainability, and value.
+                </p>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 text-amber-500">
+                      <i class="fas fa-check-circle pulse-animation"></i>
+                    </span>
+                    <span class="ml-3">365-day satisfaction guarantee</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 text-amber-500">
+                      <i class="fas fa-check-circle pulse-animation"></i>
+                    </span>
+                    <span class="ml-3">Eco-friendly packaging solutions</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="flex-shrink-0 text-amber-500">
+                      <i class="fas fa-check-circle pulse-animation"></i>
+                    </span>
+                    <span class="ml-3">24/7 dedicated customer support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div
+                class="stats-box cursor-pointer bg-white p-5 rounded-lg shadow-sm border border-slate-100 text-center"
+              >
+                <p
+                  class="text-2xl font-bold text-amber-500 counter"
+                  data-target="8"
+                >
+                  3+
+                </p>
+                <p class="text-sm font-medium text-slate-600">
+                  Years Experience
+                </p>
+              </div>
+              <div
+                class="stats-box cursor-pointer bg-white p-4 rounded-lg shadow-sm border border-slate-100 text-center"
+              >
+                <p
+                  class="text-2xl font-bold text-amber-500 counter"
+                  data-target="10"
+                >
+                  3M+
+                </p>
+                <p class="text-sm font-medium text-slate-600">
+                  Happy Customers
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Image -->
+          <div class="relative">
+            <div
+              class="team-image relative rounded-2xl overflow-hidden shadow-xl aspect-w-16 aspect-h-9"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="ShopHub Team"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/30 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p
+                  class="text-md cursor-pointer font-semibold tracking-wider text-amber-300"
+                >
+                  OUR TEAM
+                </p>
+                <h3 class="text-xl font-bold mt-1">
+                  Meet the People Behind ShopHub
+                </h3>
+              </div>
+            </div>
+
+            <!-- Floating decorative elements -->
+            <div
+              class="absolute -bottom-6 -right-6 bg-amber-400 rounded-xl w-32 h-32 opacity-10 floating-element hidden lg:block"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 bg-slate-800 rounded-full w-24 h-24 opacity-10 floating-element animation-delay-2000 hidden lg:block"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-10 sm:py-12 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <span
+            class="text-md cursor-pointer font-semibold tracking-wider uppercase text-amber-400 highlight-text"
+            >Our Promise</span
+          >
+          <h2
+            class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl"
+          >
+            Core
+            <span class="text-amber-400 highlight-text cursor-pointer"
+              >Values</span
+            >
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Value 1 -->
+          <div
+            class="value-card group bg-slate-50 p-6 rounded-xl hover:bg-amber-50 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-amber-100 group-hover:bg-amber-200 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300"
+            >
+              <i
+                class="fas fa-heart text-amber-500 text-xl pulse-animation"
+              ></i>
+            </div>
+            <h3
+              class="text-lg cursor-pointer font-bold text-slate-900 mb-2 highlight-text"
+            >
+              Customer First
+            </h3>
+            <p class="text-slate-600 text-[16px]">
+              Your satisfaction is our top priority. We go above and beyond to
+              ensure every shopping experience is exceptional.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div
+            class="value-card group bg-slate-50 p-6 rounded-xl hover:bg-amber-50 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-amber-100 group-hover:bg-amber-200 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300"
+            >
+              <i class="fas fa-leaf text-amber-500 text-xl pulse-animation"></i>
+            </div>
+            <h3
+              class="text-lg cursor-pointer font-bold text-slate-900 mb-2 highlight-text"
+            >
+              Sustainability
+            </h3>
+            <p class="text-slate-600">
+              Committed to eco-friendly operations and promoting sustainable
+              products for a better future.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div
+            class="value-card group bg-slate-50 p-6 rounded-xl hover:bg-amber-50 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-amber-100 group-hover:bg-amber-200 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300"
+            >
+              <i
+                class="fas fa-lightbulb text-amber-500 text-xl pulse-animation"
+              ></i>
+            </div>
+            <h3
+              class="text-lg cursor-pointer font-bold text-slate-900 mb-2 highlight-text"
+            >
+              Continuous Innovation
+            </h3>
+            <p class="text-slate-600">
+              Always evolving to bring you the latest trends, technologies, and
+              shopping experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-16 bg-slate-900 text-white">
+      <div class="container mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">
+          Ready to Experience
+          <span class="text-amber-400 highlight-text cursor-pointer pb-1"
+            >ShopHub</span
+          >?
+        </h2>
+        <p class="text-slate-300 max-w-2xl mx-auto mb-8">
+          Join thousands of satisfied customers who trust us for quality
+          products and exceptional service.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-slate-900 bg-amber-400 hover:bg-amber-500 hover:text-white transition-colors duration-200 pulse-animation"
+          >
+            Shop Now <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-slate-800 hover:bg-slate-700 transition-colors duration-200"
+          >
+            Learn More <i class="fas fa-info-circle ml-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- At the bottom of your body -->
+    <script src="app.js"></script>
+  </body>
+</html>
