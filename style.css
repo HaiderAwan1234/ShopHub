@@ -218,7 +218,7 @@
 .value-card {
   transform: translateY(0);
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 
 .value-card:hover {
